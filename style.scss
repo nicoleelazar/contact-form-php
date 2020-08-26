@@ -1,0 +1,128 @@
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+$blue-light: rgb(176, 214, 221);
+$blue-highlight: rgb(120, 200, 214);
+$blue-dark: rgb(98, 117, 121);
+$blue-button: rgb(15, 110, 129);
+$blue-button-alt: rgb(22, 151, 177);
+$red-error: rgb(189, 29, 29);
+$white: rgb(255, 255, 255);
+$green: rgb(120, 211, 147);
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.alert-success, .alert-danger {
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+    padding: 8px 0;
+    color: $white;
+    border-radius: 3px;
+}
+
+.alert-success {
+    background-color: $green;
+}
+
+.alert-danger {
+    background-color: $red-error;
+}
+
+
+.container {
+
+    width: 60%;
+    margin: 0 auto;
+
+    @media screen and (max-width: 900px) {
+        width: 90%;
+    }
+
+    .title {
+        font-size: 25px;
+        color: $blue-highlight;
+        margin: 40px 0;
+    }
+    
+    .form-content {
+        width: 100%;
+
+        
+    
+        .single-field {
+            margin: 20px 0;
+    
+        }
+    
+        .label {
+            font-size: 16px;
+            color: $blue-dark;
+    
+        }
+    
+    
+        .input {
+            color: $blue-dark;
+            font-size: 16px;
+            display: block;
+            width: 100%;
+            border-radius: 3px;
+            border: $blue-light solid 1px;
+            margin-top: 6px;
+            padding: 12px 20px;
+            background-color: none;
+
+    
+            &:focus {
+                outline: $blue-highlight solid 1px;
+                color: $blue-dark;
+                background-color: none;
+            }
+    
+        }
+    
+    
+        .error {
+            font-size: 16px;
+            color: $red-error;
+            padding-left: 10px;
+        }        
+    
+        .button-submit {
+            width: 100%;
+            border-radius: 3px;
+            background-color: $blue-button;
+            color: $white;
+            padding: 15px 0;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            cursor: pointer;
+    
+            &:hover {
+                background-color: $blue-button-alt;
+            }
+        }
+    
+    }
+}
+
+
+// remove autofill color 
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+    box-shadow: 0 0 0 30px white inset;
+    color: $blue-dark;
+}
